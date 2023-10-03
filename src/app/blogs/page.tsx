@@ -1,6 +1,6 @@
 import Navbar from "../_globalComponents/Navbar";
 import Footer from "../_globalComponents/Footer";
-import Article from "../_blogComponents/Article";
+import Articles from "../_blogComponents/Articles";
 
 const page = () => {
   return (
@@ -9,7 +9,7 @@ const page = () => {
         <Navbar />
       </header>
       <section>
-        <Article />
+        <Articles />
       </section>
       <footer>
         <Footer />
