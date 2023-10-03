@@ -1,20 +1,21 @@
 import Navbar from "./_globalComponents/Navbar";
 import Footer from "./_globalComponents/Footer";
-import Link from "next/link";
+import Articles from "./_blogComponents/Articles";
 
-export default function Home() {
+const page = () => {
   return (
     <div>
       <header>
         <Navbar />
       </header>
       <section>
-        <p>Welcome to the silicon blog</p>
-        <Link href={"/blogs"}>go to blogs</Link>
+        <Articles />
       </section>
       <footer>
         <Footer />
       </footer>
     </div>
   );
-}
+};
+
+export default page;
