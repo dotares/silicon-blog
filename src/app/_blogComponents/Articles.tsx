@@ -48,14 +48,16 @@ const Articles = () => {
 
   return (
     <div>
-      {data?.publication.posts.edges.map(
+      {data.publication.posts.edges.map(
         (result: ResultsObject, index: number) => {
-          <Article
-            key={index}
-            title={result.node.title}
-            brief={result.node.brief}
-            url={result.node.url}
-          />;
+          return (
+            <Article
+              key={index}
+              title={result.node.title}
+              brief={result.node.brief}
+              url={result.node.url}
+            />
+          );
         }
       )}
     </div>
