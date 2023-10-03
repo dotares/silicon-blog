@@ -1,13 +1,19 @@
-import React from "react";
 import Navbar from "../_globalComponents/Navbar";
 import Footer from "../_globalComponents/Footer";
+import Article from "../_blogComponents/Article";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
-      blogs page
-      <Footer />
+      <header>
+        <Navbar />
+      </header>
+      <section>
+        <Article />
+      </section>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
