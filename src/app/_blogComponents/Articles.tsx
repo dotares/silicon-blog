@@ -4,7 +4,7 @@ import useSWR from "swr";
 import Article from "./Article";
 
 const query = `
-query Publication {
+query {
   publication(host:"fibbonachos.hashnode.dev") {
     isTeam,
     title
@@ -13,7 +13,13 @@ query Publication {
         node {
           title,
           brief,
-          url
+          url,
+          coverImage {
+              url
+          },
+          content {
+              markdown
+          }
         }
       }
     }
