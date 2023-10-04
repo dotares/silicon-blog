@@ -2,6 +2,7 @@
 
 import useSWR from "swr";
 import Article from "./Article";
+import Link from "next/link";
 
 const query = `
 query {
@@ -57,6 +58,7 @@ const Articles = () => {
     <div>
       {data.publication.posts.edges.map(
         (result: ResultsObject, index: number) => {
+          // <Link href={}>
           return (
             <Article
               key={index}
@@ -65,6 +67,7 @@ const Articles = () => {
               url={result.node.url}
             />
           );
+          // </Link>;
         }
       )}
     </div>
