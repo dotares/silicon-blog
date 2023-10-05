@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = () => {
     return (
         <div>
-            <ul>
+            <ul className="flex justify-center space-x-12 p-12">
                 <li>
                     <a href="https://twitter.com/fibbbonachos">Twitter</a>
                 </li>
