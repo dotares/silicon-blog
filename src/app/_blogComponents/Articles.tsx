@@ -9,8 +9,10 @@ import { query, articlesFetcher } from "../api/fetchArticles";
 export interface Node {
     title: string;
     brief: string;
-    url: string;
     slug?: string;
+    coverImage: {
+        url: string;
+    };
 }
 
 type ResultsObject = {
@@ -31,7 +33,7 @@ const Articles = () => {
                             <Article
                                 title={result.node.title}
                                 brief={result.node.brief}
-                                url={result.node.url}
+                                coverImage={result.node.coverImage.url}
                             />
                         </Link>
                     );

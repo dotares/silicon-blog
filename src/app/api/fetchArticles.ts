@@ -7,13 +7,9 @@ export const query = `query {
         node {
           title
           brief
-          url
           slug
           coverImage {
             url
-          }
-          content {
-            markdown
           }
         }
       }
