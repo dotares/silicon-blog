@@ -10,7 +10,7 @@ interface ArticleProps {
 
 const Article: React.FC<ArticleProps> = ({ title, brief, coverImage }) => {
     return (
-        <div className="border-black border-2">
+        <div>
             <img src={coverImage} alt="" />
             <p>{title}</p>
             <p>{brief}</p>
