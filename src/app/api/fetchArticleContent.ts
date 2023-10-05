@@ -6,7 +6,7 @@ query ($slug: String!){
             post(slug: $slug) {
               title,
               content {
-                markdown
+                html
               }
             }
           }

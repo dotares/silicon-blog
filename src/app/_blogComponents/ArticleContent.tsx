@@ -9,10 +9,12 @@ export interface ArticleContentProps {
 
 const ArticleContent: React.FC<ArticleContentProps> = async ({ slug }) => {
     const data = await articleContentFetcher(slug);
+    const htmlData = data.publication.post.content.html;
 
     return (
         <div>
-            <p>{data.publication.post.content.markdown}</p>
+            <h1>{data.publication.post.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: htmlData }}></div>
         </div>
     );
 };
