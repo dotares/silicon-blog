@@ -10,11 +10,23 @@ const UserProfile = () => {
     if (error) return <p>Error</p>;
     return (
         <div>
-            <img src={data.user.profilePicture} alt="Fibz's profile picture" />
-            <h1>Fibz</h1>
-            <h2>@fibbonachos</h2>
-            <p>Followers: {data.user.followersCount}</p>
-            <p>{data.user.bioV2.markdown}</p>
+            <div>
+                <h1>The Silicon Blog</h1>
+                <div>
+                    by
+                    <div>
+                        <img
+                            src={data.user.profilePicture}
+                            alt="Fibz's profile picture"
+                        />{" "}
+                        <a href="https://hashnode.com/@Fibz">Fibz</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>{data.user.bioV2.markdown}</p>
+                <p>{data.user.followersCount} Followers</p>
+            </div>
         </div>
     );
 };
