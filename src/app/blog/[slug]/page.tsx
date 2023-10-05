@@ -1,8 +1,14 @@
 import React from "react";
-import { fetcher } from "../../api/fetch";
+import ArticleContent from "../../_blogComponents/ArticleContent";
 
-const page = () => {
-  return <div>page</div>;
+const page: React.FC<any> = ({ params }) => {
+    console.log(params.slug);
+
+    return (
+        <div>
+            <ArticleContent slug={params.slug} />
+        </div>
+    );
 };
 
 export default page;
