@@ -1,29 +1,14 @@
 "use client";
 
 import React from "react";
-import useSWR from "swr";
-import { query, articleContentFetcher } from "../api/fetchArticleContent";
+import { articleContentFetcher } from "../api/fetchArticleContent";
 
 export interface ArticleContentProps {
     slug: string;
 }
 
-interface ArticleData {
-    publication: {
-        post: {
-            content: {
-                markdown: string;
-            };
-        };
-    };
-}
-
-const ArticleContent: React.FC<ArticleContentProps> = ({ slug }) => {
-    const { data, error } = useSWR<ArticleData, Error>(query, () =>
-        articleContentFetcher(slug)
-    );
-    if (!data) return <p>Loading ...</p>;
-    if (error) return <p>Error</p>;
+const ArticleContent: React.FC<ArticleContentProps> = async ({ slug }) => {
+    const data = await articleContentFetcher(slug);
 
     return (
         <div>

@@ -1,5 +1,3 @@
-import { ArticleContentProps } from "../_blogComponents/ArticleContent";
-
 export const query = `
 query ($slug: String!){
         publication(host:"fibbonachos.hashnode.dev") {
