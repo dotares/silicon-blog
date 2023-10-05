@@ -21,12 +21,12 @@ export const query = `query {
   }
 }`;
 
-export const fetcher = async () => {
-  const response = await fetch("https://gql.hashnode.com", {
-    body: JSON.stringify({ query }),
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-  });
-  const { data } = await response.json();
-  return data;
+export const articlesFetcher = async () => {
+    const response = await fetch("https://gql.hashnode.com", {
+        body: JSON.stringify({ query }),
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+    });
+    const { data } = await response.json();
+    return data;
 };

@@ -4,7 +4,7 @@ import useSWR from "swr";
 import Link from "next/link";
 
 import Article from "./Article";
-import { query, fetcher } from "../api/fetchArticles";
+import { query, articlesFetcher } from "../api/fetchArticles";
 
 export interface Node {
     title: string;
@@ -18,7 +18,7 @@ type ResultsObject = {
 };
 
 const Articles = () => {
-    const { data, error } = useSWR([query], fetcher);
+    const { data, error } = useSWR(query, articlesFetcher);
     if (error) return <p>Error</p>;
     if (!data) return <p>Loading ...</p>;
 
