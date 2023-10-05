@@ -1,12 +1,21 @@
-import Navbar from "./_components/_globalComponents/Navbar";
-import Footer from "./_components/_globalComponents/Footer";
+import Navbar from "./_globalComponents/Navbar";
+import Footer from "./_globalComponents/Footer";
+import Articles from "./_blogComponents/Articles";
 
-export default function Home() {
-  return (
-    <div>
-      <Navbar />
-      Hello world
-      <Footer />
-    </div>
-  );
-}
+const page = () => {
+    return (
+        <div>
+            <header>
+                <Navbar />
+            </header>
+            <section>
+                <Articles />
+            </section>
+            <footer>
+                <Footer />
+            </footer>
+        </div>
+    );
+};
+
+export default page;
