@@ -5,6 +5,15 @@ query ($slug: String!){
           title
             post(slug: $slug) {
               title,
+              coverImage {
+                url
+              }
+              url
+              readTimeInMinutes
+              responseCount
+              publishedAt
+              reactionCount
+              views
               content {
                 html
               }
