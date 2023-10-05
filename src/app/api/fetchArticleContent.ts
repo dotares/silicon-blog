@@ -1,4 +1,4 @@
-import React from "react";
+import { ArticleContentProps } from "../_blogComponents/ArticleContent";
 
 export const query = `
 query ($slug: String!){
@@ -15,7 +15,7 @@ query ($slug: String!){
         }
           `;
 
-export const articleContentFetcher: React.FC<string> = async (slug) => {
+export const articleContentFetcher = async (slug: string) => {
     const variables = { slug: slug };
     const response = await fetch("https://gql.hashnode.com", {
         body: JSON.stringify({ query, variables }),

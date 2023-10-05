@@ -4,7 +4,7 @@ import React from "react";
 import useSWR from "swr";
 import { query, articleContentFetcher } from "../api/fetchArticleContent";
 
-interface ArticleContentProps {
+export interface ArticleContentProps {
     slug: string;
 }
 
