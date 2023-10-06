@@ -11,8 +11,8 @@ const config: Config = {
                 foreground: "#FFF",
             },
             fontFamily: {
-                JetBrains_Mono: ["JetBrains Mono", "mono"],
-                Rubik: ["Rubik", "sans-serif"],
+                mono: ["JetBrains Mono", "mono"],
+                sans: ["Rubik", "sans"],
             },
         },
     },
