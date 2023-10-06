@@ -35,7 +35,7 @@ const ArticleContent: React.FC<ArticleContentProps> = async ({ slug }) => {
             <h1 className="md:text-4xl text-2xl font-semibold text-center">
                 {articleTitle}
             </h1>
-            <div className="flex lg:flex-row flex-col justify-center space-y-6 lg:space-y-0 lg:space-x-12 space-x-0 items-center">
+            <div className="flex lg:flex-row flex-col border-backgroundz3 border-y-[0.1px] py-4 justify-between space-y-6 lg:space-y-0 lg:space-x-12 space-x-0 items-center">
                 <div className="flex space-x-6 justify-center">
                     <div className="flex items-center space-x-3">
                         <svg

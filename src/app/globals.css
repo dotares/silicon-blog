@@ -19,11 +19,15 @@
     }
 
     .articleContent h2 {
-        @apply text-3xl font-semibold border-b-[0.1px] pb-4;
+        @apply text-3xl font-semibold border-b-[0.1px] border-backgroundz3 pb-4 pt-8;
     }
 
     .articleContent h3 {
-        @apply text-2xl font-medium;
+        @apply text-2xl font-medium pt-8;
+    }
+
+    .articleContent h4 {
+        @apply text-xl font-normal pt-8;
     }
 
     .articleContent ol {
