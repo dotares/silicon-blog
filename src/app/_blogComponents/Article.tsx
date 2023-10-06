@@ -16,8 +16,8 @@ const Article: React.FC<ArticleProps> = ({ title, brief, coverImage }) => {
                 className="rounded-xl"
                 alt="Article's cover image"
             />
-            <p className="text-2xl">{title}</p>
-            <p className="text-sm">{brief}</p>
+            <p className="text-2xl font-semibold">{title}</p>
+            <p className="text-sm font-light">{brief}</p>
         </div>
     );
 };
