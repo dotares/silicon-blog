@@ -29,13 +29,20 @@ const Articles = () => {
             {data.publication.posts.edges.map(
                 (result: ResultsObject, index: number) => {
                     return (
-                        <Link key={index} href={`/blog/${result.node.slug}`}>
-                            <Article
-                                title={result.node.title}
-                                brief={result.node.brief}
-                                coverImage={result.node.coverImage.url}
-                            />
-                        </Link>
+                        <div className="flex justify-center">
+                            <div className="w-1/2 m-6">
+                                <Link
+                                    key={index}
+                                    href={`/blog/${result.node.slug}`}
+                                >
+                                    <Article
+                                        title={result.node.title}
+                                        brief={result.node.brief}
+                                        coverImage={result.node.coverImage.url}
+                                    />
+                                </Link>
+                            </div>
+                        </div>
                     );
                 }
             )}
