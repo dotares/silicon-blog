@@ -3,12 +3,13 @@
 import React from "react";
 import useSWR from "swr";
 import { query, userDataFetcher } from "../api/fetchUserData";
+import Skeleton from "react-loading-skeleton";
 
 const UserProfile = () => {
     const { data, error } = useSWR(query, userDataFetcher);
-    if (!data) return <p>Loading ...</p>;
     if (error) return <p>Error</p>;
-    return (
+
+    return data ? (
         <div className="space-y-4 p-4">
             <div className="space-y-4">
                 <h1 className="text-5xl text-center font-mono font-extrabold">
@@ -38,6 +39,16 @@ const UserProfile = () => {
                     Followers
                 </p>
             </div>
+        </div>
+    ) : (
+        <div className="text-center">
+            <Skeleton
+                width={"50%"}
+                height={400}
+                baseColor="#171717"
+                highlightColor="#292929"
+                duration={0.5}
+            />
         </div>
     );
 };
