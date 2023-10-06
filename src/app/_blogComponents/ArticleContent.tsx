@@ -25,8 +25,6 @@ const ArticleContent: React.FC<ArticleContentProps> = async ({ slug }) => {
         day: "numeric",
     });
 
-    // const highlightedContent = hljs.highlight(articleContent).value;
-
     return (
         <div className="font-sans lg:mx-32 xl:mx-72 2xl:mx-96 mx-6 space-y-12 flex flex-col">
             <img
@@ -123,7 +121,9 @@ const ArticleContent: React.FC<ArticleContentProps> = async ({ slug }) => {
             <div className="flex justify-center">
                 <div
                     className="w-[90%] articleContent"
-                    dangerouslySetInnerHTML={{ __html: articleContent }}
+                    dangerouslySetInnerHTML={{
+                        __html: articleContent,
+                    }}
                 ></div>
             </div>
         </div>
