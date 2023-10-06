@@ -2,7 +2,6 @@
 
 import React from "react";
 import useSWR from "swr";
-import Image from "next/image";
 import { query, userDataFetcher } from "../api/fetchUserData";
 
 const UserProfile = () => {
@@ -17,7 +16,7 @@ const UserProfile = () => {
                 </h1>
                 <div className="text-lg space-x-2 flex items-center justify-center">
                     <p className="text-xl text-center font-semibold">by</p>
-                    <Image
+                    <img
                         className="h-12 w-12 rounded-full drop-shadow-sm"
                         src={data.user.profilePicture}
                         alt="Fibz's profile picture"
