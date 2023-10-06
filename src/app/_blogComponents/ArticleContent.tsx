@@ -25,14 +25,16 @@ const ArticleContent: React.FC<ArticleContentProps> = async ({ slug }) => {
         day: "numeric",
     });
 
+    // const highlightedContent = hljs.highlight(articleContent).value;
+
     return (
-        <div className="font-sans px-12 space-y-12">
+        <div className="font-sans lg:mx-32 xl:mx-72 2xl:mx-96 mx-6 space-y-12 flex flex-col">
             <img
                 className="rounded-xl"
                 src={articleCoverImage}
                 alt="Article's cover image"
             />
-            <h1 className="text-5xl font-semibold text-center">
+            <h1 className="md:text-4xl text-2xl font-semibold text-center">
                 {articleTitle}
             </h1>
             <div className="flex lg:flex-row flex-col justify-center space-y-6 lg:space-y-0 lg:space-x-12 space-x-0 items-center">
@@ -118,7 +120,12 @@ const ArticleContent: React.FC<ArticleContentProps> = async ({ slug }) => {
                     </div>
                 </div>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: articleContent }}></div>
+            <div className="flex justify-center">
+                <div
+                    className="w-[90%] articleContent"
+                    dangerouslySetInnerHTML={{ __html: articleContent }}
+                ></div>
+            </div>
         </div>
     );
 };

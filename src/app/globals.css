@@ -5,3 +5,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .articleContent code {
+        @apply bg-backgroundz3 p-1 rounded-sm;
+    }
+    .articleContent pre {
+        @apply overflow-x-auto bg-backgroundz3 overflow-y-hidden p-5 my-6 rounded-lg;
+    }
+
+    .articleContent pre code {
+        @apply bg-transparent p-0 rounded-none;
+    }
+
+    .articleContent h2 {
+        @apply text-3xl font-semibold border-b-[0.1px] pb-4;
+    }
+
+    .articleContent h3 {
+        @apply text-2xl font-medium;
+    }
+
+    .articleContent ol {
+        @apply list-decimal space-y-4 mx-12;
+    }
+
+    .articleContent ul {
+        @apply list-disc space-y-4 mx-12;
+    }
+
+    .articleContent p {
+        @apply my-6;
+    }
+}
