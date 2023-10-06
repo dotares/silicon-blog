@@ -2,6 +2,8 @@
 
 import useSWR from "swr";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -24,10 +26,9 @@ type ResultsObject = {
 const Articles = () => {
     const { data, error } = useSWR(query, articlesFetcher);
     if (error) return <p>Error</p>;
-    // if (!data) return <Skeleton />;
 
     return data ? (
-        <div>
+        <div className="overflow-x-hidden">
             {data.publication.posts.edges.map(
                 (result: ResultsObject, index: number) => {
                     return (
@@ -35,7 +36,15 @@ const Articles = () => {
                             key={index}
                             className="flex justify-center drop-shadow-lg"
                         >
-                            <div className="w-full md:w-1/2 2xl:w-[25%] m-6">
+                            <motion.div
+                                whileHover={{ scale: 1.03 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 400,
+                                    damping: 10,
+                                }}
+                                className="w-full md:w-1/2 2xl:w-[25%] m-6"
+                            >
                                 <Link href={`/blog/${result.node.slug}`}>
                                     <Article
                                         title={result.node.title}
@@ -43,7 +52,7 @@ const Articles = () => {
                                         coverImage={result.node.coverImage.url}
                                     />
                                 </Link>
-                            </div>
+                            </motion.div>
                         </div>
                     );
                 }
