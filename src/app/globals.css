@@ -31,11 +31,11 @@
     }
 
     .articleContent ol {
-        @apply list-decimal space-y-4 mx-12;
+        @apply list-decimal space-y-4 lg:mx-12 mx-4;
     }
 
     .articleContent ul {
-        @apply list-disc space-y-4 mx-12;
+        @apply list-disc space-y-4 lg:mx-12 mx-4;
     }
 
     .articleContent p {
