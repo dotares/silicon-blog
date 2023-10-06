@@ -2,7 +2,6 @@
 
 import useSWR from "swr";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 import Article from "./Article";
 import { query, articlesFetcher } from "../api/fetchArticles";
