@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface ArticleProps {
     title: string;
@@ -9,7 +10,7 @@ interface ArticleProps {
 const Article: React.FC<ArticleProps> = ({ title, brief, coverImage }) => {
     return (
         <div className="bg-backgroundz2 p-6 rounded-xl space-y-4">
-            <img
+            <Image
                 src={coverImage}
                 className="rounded-xl"
                 alt="Article's cover image"
