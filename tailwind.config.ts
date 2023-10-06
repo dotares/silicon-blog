@@ -9,6 +9,10 @@ const config: Config = {
                 backgroundz2: "#171717",
                 foreground: "#FFF",
             },
+            fontFamily: {
+                JetBrains_Mono: ["JetBrains Mono", "mono"],
+                Rubik: ["Rubik", "sans-serif"],
+            },
         },
     },
     plugins: [],

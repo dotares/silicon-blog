@@ -29,12 +29,12 @@ const Articles = () => {
             {data.publication.posts.edges.map(
                 (result: ResultsObject, index: number) => {
                     return (
-                        <div className="flex justify-center drop-shadow-lg">
+                        <div
+                            key={index}
+                            className="flex justify-center drop-shadow-lg"
+                        >
                             <div className="w-full md:w-1/2 2xl:w-[25%] m-6">
-                                <Link
-                                    key={index}
-                                    href={`/blog/${result.node.slug}`}
-                                >
+                                <Link href={`/blog/${result.node.slug}`}>
                                     <Article
                                         title={result.node.title}
                                         brief={result.node.brief}

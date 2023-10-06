@@ -5,7 +5,7 @@ import Articles from "./_blogComponents/Articles";
 
 const page = () => {
     return (
-        <div>
+        <div className="font-Rubik">
             <header>
                 <Navbar />
             </header>
