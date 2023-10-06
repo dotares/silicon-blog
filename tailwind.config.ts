@@ -7,6 +7,7 @@ const config: Config = {
             colors: {
                 backgroundz1: "#121212",
                 backgroundz2: "#171717",
+                buttons: "#696868",
                 foreground: "#FFF",
             },
             fontFamily: {

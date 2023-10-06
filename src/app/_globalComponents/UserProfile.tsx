@@ -30,7 +30,7 @@ const UserProfile = () => {
                 </div>
             </div>
             <div className="flex flex-col text-center space-y-2">
-                <p>{data.user.bioV2.markdown}</p>
+                <p className="italic text-lg">"{data.user.bioV2.markdown}"</p>
                 <p>
                     <span className="font-bold">
                         {data.user.followersCount}
