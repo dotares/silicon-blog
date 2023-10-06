@@ -28,7 +28,7 @@ const ArticleContent: React.FC<ArticleContentProps> = async ({ slug }) => {
     return (
         <div className="font-sans lg:mx-32 xl:mx-72 2xl:mx-96 mx-6 space-y-12 flex flex-col">
             <img
-                className="rounded-xl"
+                className="rounded-xl drop-shadow-lg"
                 src={articleCoverImage}
                 alt="Article's cover image"
             />
