@@ -11,7 +11,7 @@ const UserProfile = () => {
     return (
         <div className="space-y-4 p-4">
             <div className="space-y-4">
-                <h1 className="text-4xl text-center">The Silicon Blog</h1>
+                <h1 className="text-5xl text-center">The Silicon Blog</h1>
                 <div className="text-lg space-x-2 flex items-center justify-center">
                     <p className="text-xl text-center">by</p>
                     <img
