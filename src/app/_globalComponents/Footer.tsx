@@ -3,7 +3,7 @@
 import React from "react";
 
 const Footer = () => {
-    return <div>Made with ❤️ by Fibz</div>;
+    return <div className="p-10 text-center">Made with ❤️ by Fibz</div>;
 };
 
 export default Footer;
