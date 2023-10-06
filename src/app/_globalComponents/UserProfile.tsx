@@ -11,20 +11,32 @@ const UserProfile = () => {
     return (
         <div className="space-y-4 p-4">
             <div className="space-y-4">
-                <h1 className="text-5xl text-center">The Silicon Blog</h1>
+                <h1 className="text-5xl text-center font-bold">
+                    The Silicon Blog
+                </h1>
                 <div className="text-lg space-x-2 flex items-center justify-center">
-                    <p className="text-xl text-center">by</p>
+                    <p className="text-xl text-center font-semibold">by</p>
                     <img
-                        className="h-12 w-12 rounded-full"
+                        className="h-12 w-12 rounded-full drop-shadow-sm"
                         src={data.user.profilePicture}
                         alt="Fibz's profile picture"
                     />{" "}
-                    <a href="https://hashnode.com/@Fibz">Fibz</a>
+                    <a
+                        href="https://hashnode.com/@Fibz"
+                        className="font-semibold"
+                    >
+                        Fibz
+                    </a>
                 </div>
             </div>
             <div className="flex flex-col text-center space-y-2">
                 <p>{data.user.bioV2.markdown}</p>
-                <p>{data.user.followersCount} Followers</p>
+                <p>
+                    <span className="font-bold">
+                        {data.user.followersCount}
+                    </span>{" "}
+                    Followers
+                </p>
             </div>
         </div>
     );
