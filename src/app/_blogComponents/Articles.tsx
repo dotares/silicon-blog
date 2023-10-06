@@ -2,6 +2,7 @@
 
 import useSWR from "swr";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import Article from "./Article";
 import { query, articlesFetcher } from "../api/fetchArticles";
@@ -29,7 +30,14 @@ const Articles = () => {
             {data.publication.posts.edges.map(
                 (result: ResultsObject, index: number) => {
                     return (
-                        <div
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{
+                                duration: 0.8,
+                                delay: 0.5,
+                                ease: [0, 0.71, 0.2, 1.01],
+                            }}
                             key={index}
                             className="flex justify-center drop-shadow-lg"
                         >
@@ -42,7 +50,7 @@ const Articles = () => {
                                     />
                                 </Link>
                             </div>
-                        </div>
+                        </motion.div>
                     );
                 }
             )}
