@@ -1,11 +1,20 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 const Navbar = () => {
     return (
         <div>
-            <ul className="flex justify-center sm:space-x-12 space-x-5 p-10">
+            <ul className="flex justify-center sm:space-x-12 items-center space-x-5 p-10">
+                <li>
+                    <Link
+                        href="/"
+                        className="font-mono text-xl font-bold text-foregroundz2"
+                    >
+                        Fibbonachos.
+                    </Link>
+                </li>
                 <li>
                     <a href="https://twitter.com/fibbbonachos">
                         <svg

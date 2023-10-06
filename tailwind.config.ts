@@ -9,7 +9,8 @@ const config: Config = {
                 backgroundz2: "#171717",
                 backgroundz3: "#292929",
                 buttons: "#696868",
-                foreground: "#FFF",
+                foregroundz1: "#FFF",
+                foregroundz2: "#CCC",
             },
             fontFamily: {
                 mono: ["JetBrains Mono", "mono"],
