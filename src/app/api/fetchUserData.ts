@@ -1,6 +1,6 @@
 export const query = `
 query {
-    user (username:"fibz") {
+    user (username:"Fibz") {
       profilePicture
       followersCount
       bioV2 {
